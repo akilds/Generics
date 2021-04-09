@@ -57,4 +57,31 @@ public class MaxiTest {
 			Float max = maxi.maximumF(5.02f,4.1f,6.3f);
 			Assert.assertEquals(maxim,max);
 		}
+
+      //TEST CASE 3.1
+      @Test
+		public void testString1()
+		{
+			MaximumT maxi = new MaximumT();
+			String max = maxi.maximumS("Peaches","Apple","Banana");
+			Assert.assertEquals("Peaches",max);
+		}
+
+		//TEST CASE 3.2
+		@Test
+		public void testString2()
+		{
+			MaximumT maxi = new MaximumT();
+			String max = maxi.maximumS("Apple","Peaches","Banana");
+			Assert.assertEquals("Peaches",max);
+		}
+
+		//TEST CASE 3.3
+		@Test
+		public void testString3()
+		{
+			MaximumT maxi = new MaximumT();
+			String max = maxi.maximumS("Apple","Banana","Peaches");
+			Assert.assertEquals("Peaches",max);
+		}
 }
