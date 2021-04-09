@@ -29,4 +29,32 @@ public class MaxiTest {
 			int max = maxi.maximumT(5,4,6);
 			Assert.assertEquals(6, max);
 		}
+
+      //TEST CASE 2.1
+      Float maxim = 6.3f;
+		@Test
+		public void testFloat1()
+		{
+			MaximumT maxi = new MaximumT();
+			Float max = maxi.maximumF(6.3f,4.1f,5.02f);
+			Assert.assertEquals(maxim,max);
+		}
+
+		//TEST CASE 2.2
+		@Test
+		public void testFloat2()
+		{
+			MaximumT maxi = new MaximumT();
+			Float max = maxi.maximumF(5.02f,6.3f,4.1f);
+			Assert.assertEquals(maxim,max);
+		}
+
+		//TEST CASE 2.3
+		@Test
+		public void testFloat3()
+		{
+			MaximumT maxi = new MaximumT();
+			Float max = maxi.maximumF(5.02f,4.1f,6.3f);
+			Assert.assertEquals(maxim,max);
+		}
 }

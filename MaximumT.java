@@ -17,5 +17,19 @@ public class MaximumT {
 		return max;
 	}
 
+   //USE CASE 2 - Maximum Float
+   public float maximumF(Float x, Float y, Float z)
+	{
+		Float max = x;
+		if(y.compareTo(max)>0)
+		{
+			max = y;
+		}
+		if(z.compareTo(max)>0)
+		{
+			max = z;
+		}
+		return max;
+	}
 }
 
