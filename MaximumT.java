@@ -48,3 +48,45 @@ public class MaximumT {
 	}
 }
 
+// REFACTOR 1 and 2
+public class MaximumTest <T extends Comparable<T>>{
+
+	T x,y,z;
+
+	public MaximumTest(T x, T y, T z) {
+		this.x=x;
+		this.y=y;
+		this.z=z;
+	}
+
+	public T maximum()
+	{
+		return MaximumTest.maximum(x, y, z);
+	}
+
+	public static <T extends Comparable<T>> T maximum(T x, T y, T z)
+	{
+		T max = x;
+		if(y.compareTo(max)>0)
+		{
+			max = y;
+		}
+		if(z.compareTo(max)>0)
+		{
+			max = z;
+		}
+		return max;
+	}
+
+}
+
+//USe CASE 4 - Generic List
+class MaxiGen <T extends Comparable<T>>{
+
+	public static <T extends Comparable<T>> T maximum4(ArrayList<T> list){
+
+		Collections.sort(list,Collections.reverseOrder());
+		return list.get(0);
+
+	}
+}
