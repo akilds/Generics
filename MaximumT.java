@@ -78,6 +78,25 @@ public class MaximumTest <T extends Comparable<T>>{
 		return max;
 	}
 
+   //USE CSAE 5 - Print using Gneric
+   public static void testMaximum(String x, String y, String z)
+   {
+      String max = x;
+      if(y.compareTo(max)>0)
+      {
+         max = y;
+      }
+      if(z.compareTo(max)>0)
+      {
+         max = z;
+      }
+      printMax(x,y,z,max);
+   }
+
+   public static <T> void printMax(T x, T y, T z, T max)
+   {
+    System.out.println("Max of %s, %s, %s is %s\n",x,y,z,max);
+   }
 }
 
 //USe CASE 4 - Generic List
